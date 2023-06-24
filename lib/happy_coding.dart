@@ -9,7 +9,7 @@ class HappyCoding extends StatefulWidget {
 
 class _HappyCodingState extends State<HappyCoding> {
   bool isSwitch = false;
-
+  bool isLiked = true;
   bool? isChecked = false;
   @override
   Widget build(BuildContext context) {
@@ -73,10 +73,15 @@ class _HappyCodingState extends State<HappyCoding> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          isLiked = !isLiked;
+                        });
+                      },
                       label: const Text('LIKE'),
-                      icon: const Icon(
-                        Icons.thumb_up,
+                      icon:  Icon(
+
+                        isLiked ? Icons.thumb_up : Icons.thumb_down_sharp,
                         size: 15,
                       )),
                   OutlinedButton.icon(
@@ -141,8 +146,7 @@ class _HappyCodingState extends State<HappyCoding> {
             const SizedBox(
               height: 30,
             ),
-            Image.network(
-                'https://ju.edu.et/wp-content/uploads/2020/01/JU-SA-_0.jpg'),
+            Image.asset('images/download.jfif'),
             const SizedBox(
               height: 30,
             ),
