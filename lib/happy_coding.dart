@@ -142,7 +142,7 @@ class _HappyCodingState extends State<HappyCoding> {
               height: 30,
             ),
             Image.network(
-                'https://ju.edu.et/jit/wp-content/uploads/sites/11/2021/12/1-1-d-1024x416.png'),
+                'https://ju.edu.et/wp-content/uploads/2020/01/JU-SA-_0.jpg'),
             const SizedBox(
               height: 30,
             ),
